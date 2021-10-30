@@ -1,0 +1,61 @@
+html, body {
+  min-height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5 !important;
+}
+
+#classroom-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid;
+  padding: 10px;
+  background-color: white;
+}
+
+.see-results:hover {
+  background-color: white !important;
+  color: blue;
+  border: 1px solid blue;
+}
+
+.child {
+  margin: 1px 0;
+}
+
+.see-results-link {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.phone-number-container {
+  width: 70% !important;
+  margin: 0 auto;
+}
+
+.phone-number-label {
+  position: relative;
+  width: 80px;
+  left: 16%;
+  top: 12px;
+  background: white;
+  z-index: 2;
+}
+
+#update-phone-input {
+  z-index: 1;
+}

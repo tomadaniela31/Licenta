@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../results.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+  <title>Rezultate</title>
+</head>
+<body>
+  <div id="results-app">
+    <a class="btn btn-primary" href="<%= backButtonLink  %>">Listă copii</a>
+    <h2 class="text-center m-3">Rezultate pentru <i><%= childFullname %></i></h2>
+    <% if (parentPhone.length) { %>
+      <h4 class="text-center m-3">Telefon părinte: <i><%= parentPhone %></i></h4>
+    <% } %>
+    <div id="games-list">
+      <% games.forEach((game) => { %>
+        <div class="game-score-container">
+          <h3 class="bg-dark p-2 text-light"><%= game.name %></h3>
+          <table class="table table-sm">
+            <tbody>
+              <% if (game.scores.length) { %>
+                <thead>
+                  <tr>
+                    <th scope="col">Data</th>
+                    <th scope="col">Rezultat</th>
+                  </tr>
+                </thead>
+                <% game.scores.forEach((score) => { %>
+                  <tr>
+                    <td><%= new Date(score.date).toDateString() %></td>
+                    <td class="<%= score.score < 5 ? 'table-danger' : score.score < 7 ? 'table-warning' : 'table-success' %>">
+                      <%= score.score %>
+                    </td>
+                  </tr>
+                <% }) %>
+              <% } else { %>
+                <div class="game-no-score">Acest joc nu a fost jucat până acum.</div>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>

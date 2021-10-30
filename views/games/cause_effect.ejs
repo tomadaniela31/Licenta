@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../index.css" rel="stylesheet" />
+  <script src="../../js/games/cause_effect.js" type="module"></script>
+  <title>Joc Cauză Efect</title>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<body class="gray-bg">
+  <div id="game-screen" class="white-bg">
+    <a class="btn btn-warning" href="/pacient">Înapoi la jocuri</a>
+    <h1>Joc Cauză Efect</h1>
+    <div id="obtained-score" class="display-none"></div>
+    <div id="game-level">
+      <div id="level-1">
+        <!-- Aici folosim grid container-ul de la bootstrap care imparte elementul in 12 coloane -->
+        <!-- col-6 = ocupa 6 coloane din cele 12 -->
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/cauza0.jpg" class="cause-img" />
+            </div>
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/efect0.jpg" class="effect-img" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/cauza1.jpg" class="cause-img" />
+            </div>
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/efect1.jpg" class="effect-img" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/cauza2.jpg" class="cause-img" />
+            </div>
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/efect4.jpg" class="effect-img" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/cauza3.jpg" class="cause-img" />
+            </div>
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/efect2.jpg" class="effect-img" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/cauza4.jpg" class="cause-img" />
+            </div>
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/efect3.jpg" class="effect-img" />
+            </div>
+          </div>
+        </div>
+        <button id="next-btn" class="btn btn-primary"> Continuă </button>
+      </div>
+    </div>
+    <div id="game-level">
+      <!-- d-none = display: none -->
+      <div id="level-2" class="d-none">
+        <!-- Aici folosim grid container-ul de la bootstrap care imparte elementul in 12 coloane -->
+        <!-- col-6 = ocupa 6 coloane din cele 12 -->
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/cauza5.jpg" class="cause-img" />
+            </div>
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/efect7.jpg" class="effect-img" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/cauza6.jpg" class="cause-img" />
+            </div>
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/efect9.jpg" class="effect-img" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/cauza7.jpg" class="cause-img" />
+            </div>
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/efect5.jpg" class="effect-img" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/cauza8.jpg" class="cause-img" />
+            </div>
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/efect6.png" class="effect-img" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/cauza9.jpg" class="cause-img" />
+            </div>
+            <div class="col-6">
+              <img src="../../images/games/cause_effect/efect8.jpg" class="effect-img" />
+            </div>
+          </div>
+          <button id="finish-btn" class="btn btn-primary"> Trimite </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./pacient.css" rel="stylesheet" />
+    <script src="./pacient.js" type="module"></script>
+    <title>Jocuri</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
+  <body class="text-center">
+    <div class="games-list">
+      <button id="sign-out-btn" class="btn btn-danger mb-3">
+        Închide sesiunea
+      </button>
+      <button id="unique-code-btn" class="btn btn-info mb-3 text-white">
+        Generează Cod Unic
+      </button>
+      <div id="unique-code-container" class="d-none alert alert-warning alert-dismissible fade show">
+        Codul unic asociat acestui cont este: <strong><%= id %></strong>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-4">
+              <img class="game-icon" src="./icon-joc-atentie.png" />
+            </div>
+            <div class="col-8">
+              <h1>Joc de atentie</h1>
+              <div class="text-justify">
+                Pe ecran apare o imagine ce reprezintă un eveniment. Sub imagine
+                se află o listă cu 4 posibile evenimente. Copilul trebuie să
+                aleagă evenimentul corespunzător imaginii. Fiecare imagine are o
+                singură variantă corectă. Aplicația nu permite revenirea la
+                nivelul anterior. Fiecare răspuns corect valorează un punct. La
+                finalul jocului va fi afișat scorul copilului.
+              </div>
+              <a class="btn btn-primary" href="/game/1">Joacă</a>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-4">
+              <img class="game-icon" src="./icon-joc-orientare.png" />
+            </div>
+            <div class="col-8">
+              <h1>Joc de Orientare</h1>
+              <div class="text-justify">
+                Pe ecran apare o imagine ce reprezintă poziția unui obiect. Sub
+                imagine se află o listă cu 4 posibile poziții. Copilul trebuie
+                să aleagă poziția corectă a obiectului. Fiecare imagine are o
+                singură variantă corectă. Aplicația nu permite revenirea la
+                nivelul anterior. Fiecare răspuns corect valorează un punct. La
+                finalul jocului va fi afișat scorul copilului.
+              </div>
+              <a class="btn btn-primary" href="/game/2">Joacă</a>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-4">
+              <img class="game-icon" src="./icon-joc-cauza-efect.jpg" />
+            </div>
+            <div class="col-8">
+              <h1>Joc Cauză Efect</h1>
+              <div class="text-justify">
+                Pe ecran se vor apărea 2 coloane cu câte 5 poze pe fiecare. În
+                coloana din stânga vor fi imagini ce reprezintă cauze, iar pe
+                coloana din dreapta vor fi imagini ce reprezintă efectele. Se va
+                selecta o cauză, iar apoi efectul corespunzător cauzei.
+                Aplicația nu permite revenirea la nivelul anterior. La finalul
+                jocului va fi afișat scorul copilului.
+              </div>
+              <a class="btn btn-primary" href="/game/3">Joacă</a>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-4">
+              <img
+                class="game-icon"
+                src="./icon-joc-despartire-in-silabe.png"
+              />
+            </div>
+            <div class="col-8">
+              <h1>Joc Despărțire în Silabe</h1>
+              <div class="text-justify">
+                Pe ecran apare o imagine cu denumirea aferentă acesteia. Sub
+                imagine se află o listă cu 3 posibile variante de despărțire în
+                silabe a cuvântului. Copilul trebuie să aleagă varianta corectă
+                de despărțire în silabe. Fiecare imagine are o singură variantă
+                corectă. Aplicația nu permite revenirea la nivelul anterior.
+                Fiecare răspuns corect valorează un punct. La finalul jocului va
+                fi afișat scorul copilului.
+              </div>
+              <a class="btn btn-primary" href="/game/4">Joacă</a>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-4">
+              <img class="game-icon" src="./icon-joc-rime.jpg" />
+            </div>
+            <div class="col-8">
+              <h1>Joc Rime</h1>
+              <div class="text-justify">
+                Pe ecran va fi o imagine, cu denumirea acesteia. Sub imaginea
+                respectivă se află alte 3 imagini cu denumiri. Copilul va alege
+                una din cele 3 imagini care rimează cu imaginea inițială. Se
+                poate alege o singură variantă de răspuns. Nu se poate reveni la
+                nivelul anterior. Fiecare răspuns corect valorează 2 puncte. La
+                finalul jocului va fi afișat scorul copilului.
+              </div>
+              <a class="btn btn-primary" href="/game/5">Joacă</a>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-4">
+              <img class="game-icon" src="./icon-joc-ordinea-actiunilor.jpg" />
+            </div>
+            <div class="col-8">
+              <h1>Joc Ordinea Acțiunilor</h1>
+              <div class="text-justify">
+                În partea din stânga a ecranului se află un tabel gol. În partea
+                din dreapta a tabelului este o listă cu acțiuni din rutina
+                zilnica a unui copil. Pacientul trebuie să tragă acțiunea la
+                locul corect din tabel. Dacă alegerea este incorectă nu va
+                rămâne în tabel. Scorul inițial este 10. La fiecare greșeală se
+                scade 1 punct. La finalul jocului va fi afișat scorul copilului.
+              </div>
+              <a class="btn btn-primary" href="/game/6">Joacă</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

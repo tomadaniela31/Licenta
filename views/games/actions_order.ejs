@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../index.css" rel="stylesheet" />
+    <script src="../../js/games/actions_order.js" type="module"></script>
+    <title>Joc Ordinea Acțiunilor</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+  </head>
+  <body class="gray-bg">
+    <div id="game-screen" class="white-bg" style="min-height: 500px">
+      <a class="btn btn-warning" href="/pacient">Înapoi la jocuri</a>
+      <h1>Joc Ordinea Acțiunilor</h1>
+      <div id="obtained-score" class="display-none"></div>
+      <div id="game-level">
+        <div class="container" style="min-height: 330px">
+          <div class="row">
+            <div class="col-6">
+              <div id="droppable"></div>
+            </div>
+            <div class="col-6">
+              <ul class="list-group">
+                <li
+                  class="list-group-item draggable mt-1"
+                  style="background: lightblue"
+                  draggable="true"
+                  data-id="7"
+                >
+                  Copilul ia autobuzul.
+                </li>
+                <li
+                  class="list-group-item draggable mt-1"
+                  style="background: lightcoral"
+                  draggable="true"
+                  data-id="4"
+                >
+                  Copilul mănâncă.
+                </li>
+                <li
+                  class="list-group-item draggable mt-1"
+                  style="background: lightcyan"
+                  draggable="true"
+                  data-id="1"
+                >
+                  Copilul se ridică din pat.
+                </li>
+                <li
+                  class="list-group-item draggable mt-1"
+                  style="background: lightpink"
+                  draggable="true"
+                  data-id="2"
+                >
+                  Copilul se spală pe dinți.
+                </li>
+                <li
+                  class="list-group-item draggable mt-1"
+                  style="background: lightskyblue"
+                  draggable="true"
+                  data-id="8"
+                >
+                  Copilul pleacă spre școală.
+                </li>
+                <li
+                  class="list-group-item draggable mt-1"
+                  style="background: lightsalmon"
+                  draggable="true"
+                  data-id="0"
+                >
+                  Copilul se trezește.
+                </li>
+                <li
+                  class="list-group-item draggable mt-1"
+                  style="background: lightyellow"
+                  draggable="true"
+                  data-id="6"
+                >
+                  Copilul iese din casă.
+                </li>
+                <li
+                  class="list-group-item draggable mt-1"
+                  style="background: lightgreen"
+                  draggable="true"
+                  data-id="5"
+                >
+                  Copilul se încalță.
+                </li>
+                <li
+                  class="list-group-item draggable mt-1"
+                  style="background: lightsalmon"
+                  draggable="true"
+                  data-id="3"
+                >
+                  Copilul se îmbracă.
+                </li>
+                <li
+                  class="list-group-item draggable mt-1"
+                  style="background: lightgrey"
+                  draggable="true"
+                  data-id="9"
+                >
+                  Copilul ajunge la școală.
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="error text-danger mt-1 d-none">Mai încearcă!</p>
+        <button id="finish-btn" class="btn btn-primary mt-3 disabled">Termină</button>
+      </div>
+    </div>
+  </body>
+</html>

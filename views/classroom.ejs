@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../classroom.css" rel="stylesheet" />
+  <script src="../../classroom.js" type="module"></script>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+  <title>Clasa</title>
+</head>
+<body class="text-center">
+  <div id="classroom-container">
+    <div>
+      <a class="btn btn-warning" href="/logoped">Lista de Clase</a>
+    </div>
+    <h1 class="m-3"><%= name %></h3>
+    <div id="classroom-id" data-id="<%= id %>"></div>
+
+    <ul class="list-group">
+      <% children.forEach((child) => { %>
+        <div class="child">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <%= child.fullname %>
+            </div>
+            <div>
+              <a class="see-results-link" href="<%= child.resultsPath %>">
+                <span class="p-2 badge bg-primary rounded-pill see-results">Vezi rezultate</span>
+              </a>
+              <span data-id="<%= child.id %>" id="remove-child-btn" title="Elimină din clasă" class="btn btn-danger pull-right">x</span>
+            </div>
+          </li>
+        </div>
+      <% }) %>
+    </ul>
+
+    <div class="mt-3">
+      <p>Pentru a adăuga un copil, introduceți mai jos codul unic al acestuia.</p>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="add-child-input" placeholder="Cod unic" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-primary" id="add-child-btn">Adaugă Copil</button>
+        </div>
+      </div>
+      <div class="error text-danger mt-3"></div>
+    </div>
+</body>
+</html>
